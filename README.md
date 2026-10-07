@@ -665,38 +665,156 @@ The complete project is available as a ready-to-use ZIP archive:
 
 ### Contents (67 files)
 ```
+# GeoMeasure API
+
+A full-stack geospatial file measurement application for uploading KML and
+Shapefile ZIP files, extracting geographic features, handling CRS
+transformations, and calculating area and length measurements.
+
+---
+
+## 📌 Overview
+
+GeoMeasure API is a geospatial measurement platform designed to process
+geospatial files and provide accurate measurements.
+
+Supported formats:
+
+- KML
+- ZIP containing Shapefile
+
+Supported measurements:
+
+- Polygon → Area
+- LineString → Length
+- Point → No measurement required
+
+The application provides a clean dashboard for uploading files, viewing
+processed files, and inspecting feature-level measurements.
+
+---
+
+## ✨ Features
+
+### Geospatial Processing
+
+- KML file processing
+- Shapefile ZIP processing
+- Feature extraction
+- Geometry type detection
+- Properties/attribute extraction
+- CRS detection
+- Geographic-to-projected CRS transformation
+- Automatic UTM zone selection
+- Polygon area calculation
+- LineString length calculation
+- Point handling
+- Unsupported geometry handling
+- Invalid geometry handling
+
+### Dashboard
+
+- File upload
+- File history
+- File details
+- Measurement tables
+- Measurement summaries
+- Dark/light theme
+- API explorer
+- Toast notifications
+- Responsive UI
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Axios
+- Lucide React
+- React Hot Toast
+
+### Backend
+
+- Python
+- FastAPI
+- GeoPandas
+- Shapely
+- PyProj
+- Fiona
+- FastKML
+- SQLAlchemy
+
+### Database
+
+- SQLite for local development
+- PostgreSQL for production
+
+---
+
+## 📂 Project Structure
+
+```text
 geomap-measurement-api/
-├── backend/                    # FastAPI backend
-│   ├── app/
-│   │   ├── main.py            # Application entry point
-│   │   ├── core/              # Config, database
-│   │   ├── models/            # SQLAlchemy models
-│   │   ├── schemas/           # Pydantic schemas
-│   │   ├── services/          # Business logic
-│   │   ├── api/routes/        # REST endpoints
-│   │   ├── utils/             # Validators, ZIP utils
-│   │   └── tests/             # Pytest suite
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   ├── pytest.ini
-│   └── sample_data/
-├── frontend/                   # React + Vite + TypeScript
-│   ├── src/
-│   │   ├── components/        # UI components
-│   │   ├── pages/             # Page components
-│   │   ├── services/          # API client
-│   │   ├── types/             # TypeScript types
-│   │   └── utils/             # Helpers
-│   ├── package.json
-│   ├── vite.config.ts
-│   ├── tailwind.config.js
-│   └── Dockerfile
-├── docker-compose.yml
-├── vercel.json                # Vercel deployment config
-├── .vscode/                   # VS Code configuration
-├── README.md
+│
+├── api/
+│   └── index.ts
+│
+├── src/
+│   ├── components/
+│   │   ├── api/
+│   │   │   └── APIExplorer.tsx
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── Login.tsx
+│   │   │   └── Register.tsx
+│   │   │
+│   │   ├── dashboard/
+│   │   │   └── Dashboard.tsx
+│   │   │
+│   │   ├── files/
+│   │   │   ├── FileDetails.tsx
+│   │   │   ├── FilesList.tsx
+│   │   │   └── MeasurementsTable.tsx
+│   │   │
+│   │   ├── layout/
+│   │   │   └── Layout.tsx
+│   │   │
+│   │   ├── ui/
+│   │   │   ├── Card.tsx
+│   │   │   ├── Table.tsx
+│   │   │   └── ThemeToggle.tsx
+│   │   │
+│   │   └── upload/
+│   │       └── UploadZone.tsx
+│   │
+│   ├── context/
+│   │   ├── AuthContext.tsx
+│   │   └── ThemeContext.tsx
+│   │
+│   ├── services/
+│   │   └── api.ts
+│   │
+│   ├── types/
+│   │   └── ...
+│   │
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── .env.example
 ├── .gitignore
-└── .env.example
+├── docker-compose.yml
+├── package.json
+├── README.md
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+└── ...
 ```
 
 ### Quick Start from ZIP
