@@ -1,0 +1,7 @@
+{
+  "name": "GeoMeasure API",
+  "description": "Geospatial File Measurement Service - Process KML and Shapefile files to extract features and calculate geometric measurements.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
