@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDropzone } from 'react-dropzone';
 import { filesApi } from '../../services/api';
 import { Button } from '../ui/Button';
@@ -272,6 +273,7 @@ export function UploadZone({ onUploadComplete }: UploadZoneProps) {
 }
 
 export function UploadPage() {
+  const navigate = useNavigate();
   return (
     <div className="max-w-4xl mx-auto">
       <div className="mb-6">
@@ -280,9 +282,7 @@ export function UploadPage() {
           Upload a KML, KMZ, or Shapefile (ZIP) to extract features and calculate geometric measurements.
         </p>
       </div>
-      <UploadZone onUploadComplete={(id) => {
-        window.location.href = `/files/${id}`;
-      }} />
+      <UploadZone onUploadComplete={(id) => navigate(`/files/${id}`)} />
     </div>
   );
 }

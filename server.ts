@@ -591,7 +591,7 @@ app.get('/openapi.json', (req, res) => {
 });
 
 // API Routes
-app.post('/api/files', upload.single('file'), async (req: Request, res: Response) => {
+app.post(['/api/files', '/files'], upload.single('file'), async (req: Request, res: Response) => {
   try {
     const file = req.file;
     if (!file) {
@@ -746,7 +746,7 @@ app.post('/api/files', upload.single('file'), async (req: Request, res: Response
   }
 });
 
-app.get('/api/files', (req: Request, res: Response) => {
+app.get(['/api/files', '/files'], (req: Request, res: Response) => {
   const page = Math.max(1, parseInt(req.query.page as string) || 1);
   const pageSize = Math.min(100, Math.max(1, parseInt(req.query.page_size as string) || 20));
 
@@ -775,7 +775,7 @@ app.get('/api/files', (req: Request, res: Response) => {
   });
 });
 
-app.get('/api/files/:id', (req: Request, res: Response) => {
+app.get(['/api/files/:id', '/files/:id'], (req: Request, res: Response) => {
   const file = filesDatabase.get(req.params.id);
   if (!file) {
     return res.status(404).json({ error: 'Not Found', message: 'File not found' });
@@ -795,7 +795,7 @@ app.get('/api/files/:id', (req: Request, res: Response) => {
   });
 });
 
-app.get('/api/files/:id/measurements', (req: Request, res: Response) => {
+app.get(['/api/files/:id/measurements', '/files/:id/measurements'], (req: Request, res: Response) => {
   const file = filesDatabase.get(req.params.id);
   if (!file) {
     return res.status(404).json({ error: 'Not Found', message: 'File not found' });
@@ -855,7 +855,7 @@ app.get('/api/files/:id/measurements', (req: Request, res: Response) => {
   });
 });
 
-app.delete('/api/files/:id', (req: Request, res: Response) => {
+app.delete(['/api/files/:id', '/files/:id'], (req: Request, res: Response) => {
   const exists = filesDatabase.has(req.params.id);
   if (!exists) {
     return res.status(404).json({ error: 'Not Found', message: 'File not found' });
@@ -863,6 +863,15 @@ app.delete('/api/files/:id', (req: Request, res: Response) => {
 
   filesDatabase.delete(req.params.id);
   res.status(204).send();
+});
+
+// Global Express error handler to prevent Vercel 500 crashes
+app.use((err: any, req: Request, res: Response, _next: any) => {
+  console.error('Unhandled server error:', err);
+  res.status(500).json({
+    error: 'Internal Server Error',
+    message: err?.message || 'Server error occurred',
+  });
 });
 
 // Setup dev and production Vite serving
