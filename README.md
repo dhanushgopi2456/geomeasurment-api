@@ -1011,9 +1011,9 @@ Add actual screenshots here for the strongest GitHub presentation.
 
 ### 📖 API Explorer
 
-```markdown
-![API Explorer](./screenshots/api-explorer.png)
-```
+<p align="center">
+  <img src="https://github.com/dhanushgopi2456/My-All-Project-Screenshots/blob/main/Screenshot%202026-10-17%20082248.png" width="90%" alt=Api Explorer"/>
+</p>
 
 ---
 
