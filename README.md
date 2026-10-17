@@ -950,59 +950,6 @@ docker compose logs -f backend
 
 
 ---
-## 📸 Application Screenshots
-
-Explore the GeoMeasure API interface and its geospatial measurement workflow.
-
-### 1. 🌐 Application Overview
-
-Show the main application page and its user interface.
-
-<p align="center">
-  <img src="./screenshots/01-application-overview.png" alt="GeoMeasure API application overview" width="100%"/>
-</p>
-
-### 2. 📂 Geospatial File Upload
-
-Show the interface for uploading supported KML or zipped Shapefile data.
-
-<p align="center">
-  <img src="./screenshots/02-file-upload.png" alt="Geospatial file upload interface" width="90%"/>
-</p>
-
-### 3. 🗺️ Geometry Visualization
-
-Show the uploaded geographic data or geometry preview, if available in the interface.
-
-<p align="center">
-  <img src="./screenshots/03-geometry-visualization.png" alt="Geospatial geometry visualization" width="90%"/>
-</p>
-
-### 4. 📏 Area and Length Measurements
-
-Show the calculated area or length results returned by the application.
-
-<p align="center">
-  <img src="./screenshots/04-measurement-results.png" alt="Geospatial area and length measurement results" width="90%"/>
-</p>
-
-### 5. 🌍 Coordinate Reference System
-
-Show coordinate reference system information or automatic UTM selection details, if exposed by the application.
-
-<p align="center">
-  <img src="./screenshots/05-coordinate-reference-system.png" alt="Coordinate reference system and UTM information" width="90%"/>
-</p>
-
-### 6. ⚡ API Response and Validation
-
-Show a successful API response, validation result, or error response from the application or API documentation.
-
-<p align="center">
-  <img src="./screenshots/06-api-response.png" alt="GeoMeasure API response and validation" width="90%"/>
-</p>
-
-
 # ☁️ Deployment Architecture
 
 The documented deployment separates the frontend and backend:
