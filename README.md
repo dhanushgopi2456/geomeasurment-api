@@ -988,14 +988,14 @@ Add actual screenshots here for the strongest GitHub presentation.
 
 
 <p align="center">
-  <img src="https://github.com/dhanushgopi2456/My-All-Project-Screenshots/blob/main/Screenshot%202026-10-17%20080721.png" width="90%" alt="Team Task Manager dashboard"/>
+  <img src="https://github.com/dhanushgopi2456/My-All-Project-Screenshots/blob/main/Screenshot%202026-10-17%20080721.png" width="90%" alt="Geo Measure dashboard"/>
 </p>
 
 ### 📤 Upload Interface
 
-```markdown
-![Upload Interface](./screenshots/upload.png)
-```
+<p align="center">
+  <img src="https://github.com/dhanushgopi2456/My-All-Project-Screenshots/blob/main/Screenshot%202026-10-17%20080743.png" width="90%" alt="File Upload"/>
+</p>
 
 ### 📊 Measurement Table
 
