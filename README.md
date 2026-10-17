@@ -988,7 +988,7 @@ Add actual screenshots here for the strongest GitHub presentation.
 
 
 <p align="center">
-  <img src="https://github.com/dhanushgopi2456/My-All-Project-Screenshots/blob/main/Screenshot%202026-10-12%20160441.png" width="90%" alt="Team Task Manager dashboard"/>
+  <img src="https://github.com/dhanushgopi2456/My-All-Project-Screenshots/blob/main/Screenshot%202026-10-17%20080721.png" width="90%" alt="Team Task Manager dashboard"/>
 </p>
 
 ### 📤 Upload Interface
