@@ -1005,9 +1005,9 @@ Add actual screenshots here for the strongest GitHub presentation.
 
 ### 🔎 File Details
 
-```markdown
-![File Details](./screenshots/file-details.png)
-```
+<p align="center">
+  <img src="https://github.com/dhanushgopi2456/My-All-Project-Screenshots/blob/main/Screenshot%202026-10-17%20081239.png" width="90%" alt=Results"/>
+</p>
 
 ### 📖 API Explorer
 
