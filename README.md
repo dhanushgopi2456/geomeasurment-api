@@ -999,9 +999,9 @@ Add actual screenshots here for the strongest GitHub presentation.
 
 ### 📊 Measurement Table
 
-```markdown
-![Measurements](./screenshots/measurements.png)
-```
+<p align="center">
+  <img src="https://github.com/dhanushgopi2456/My-All-Project-Screenshots/blob/main/Screenshot%202026-10-17%20080909.png" width="90%" alt="Measurements"/>
+</p>
 
 ### 🔎 File Details
 
